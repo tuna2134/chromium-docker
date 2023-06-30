@@ -19,3 +19,6 @@ RUN apt-get install -y libglib2.0-0 libnss3 \
 
 COPY --from=installer /src/installer/chrome-linux/* .
 ENTRYPOINT ["./chrome"]
+
+EXPOSE 9222
+CMD ["--remote-debugging-port=9222"]
