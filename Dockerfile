@@ -10,6 +10,7 @@ FROM debian
 
 WORKDIR /src/app
 
+RUN apt-get update
 RUN apt-get install -y libglib2.0-0 libnss3 \
   libatk1.0-0 libatk-bridge2.0-0 libcups2 \
   libdrm2 libxkbcommon-dev libxcomposite1 \
