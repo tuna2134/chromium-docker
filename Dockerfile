@@ -17,5 +17,5 @@ RUN apt-get install -y libglib2.0-0 libnss3 \
   libxdamage1 libxfixes3 libxrandr2 libgbm1 \
   libpango-1.0-0 libcairo2 libasound2
 
-COPY --from=installer /src/installer/chrome-linux/chrome .
+COPY --from=installer /src/installer/chrome-linux/* .
 ENTRYPOINT ["./chrome"]
