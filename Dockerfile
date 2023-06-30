@@ -21,4 +21,4 @@ COPY --from=installer /src/installer/chrome-linux/* .
 ENTRYPOINT ["./chrome"]
 
 EXPOSE 9222
-CMD ["--remote-debugging-port=9222"]
+CMD ["--remote-debugging-port=9222", "--remote-debugging-address=0.0.0.0"]
