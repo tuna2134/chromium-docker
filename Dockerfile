@@ -14,4 +14,4 @@ RUN apt-get install -y libglib2.0-0 libnss3 \
 
 WORKDIR /src/app/chrome-linux
 
-CMD ["./chrome"]
+ENTRYPOINT ["./chrome"]
