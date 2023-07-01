@@ -3,7 +3,7 @@ FROM debian AS installer
 WORKDIR /src/installer
 
 RUN apt-get update && apt-get install -y wget unzip
-RUN wget https://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/1164491/chrome-linux.zip && \
+RUN wget https://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/1165082/chrome-linux.zip && \
   unzip chrome-linux.zip
 
 FROM debian
