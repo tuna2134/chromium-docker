@@ -3,6 +3,8 @@ name: Push to github container register
 on:
   push:
     branches: [main]
+  schedule:
+  - cron: "* */1 * * *"
 
 jobs:
   push-docker:
