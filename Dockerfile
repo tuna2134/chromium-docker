@@ -3,7 +3,7 @@ FROM debian AS installer
 WORKDIR /src/installer
 
 RUN apt-get update && apt-get install -y wget unzip
-RUN wget wget https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots && \
+RUN wget --trust-server-names https://download-chromium.appspot.com/dl/Linux_x64?type=snapshots && \
   unzip chrome-linux.zip
 
 FROM debian
