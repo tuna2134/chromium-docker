@@ -19,8 +19,8 @@ RUN apt-get install -y libglib2.0-0 libnss3 \
   task-japanese fonts-ipafont fonts-ipaexfont
 RUN fc-cache -fv
 
-COPY --from=installer /src/installer/chrome-linux/* .
 RUN adduser chrome
+COPY --from=installer --chown=chrome:chrome /src/installer/chrome-linux/* .
 USER chrome
 ENTRYPOINT ["./chrome"]
 
