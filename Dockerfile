@@ -20,6 +20,8 @@ RUN apt-get install -y libglib2.0-0 libnss3 \
 RUN fc-cache -fv
 
 COPY --from=installer /src/installer/chrome-linux/* .
+RUN adduser chrome
+USER chrome
 ENTRYPOINT ["./chrome"]
 
 EXPOSE 9222
