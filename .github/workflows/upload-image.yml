@@ -33,3 +33,4 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}
             tuna2134/chromium-docker
+          platform: arm64,amd64
