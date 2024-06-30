@@ -16,7 +16,12 @@ RUN apt-get install -y libglib2.0-0 libnss3 \
   libdrm2 libxkbcommon-dev libxcomposite1 \
   libxdamage1 libxfixes3 libxrandr2 libgbm1 \
   libpango-1.0-0 libcairo2 libasound2 \
-  task-japanese fonts-ipafont fonts-ipaexfont
+  task-japanese fonts-ipafont fonts-ipaexfont \
+  language-pack-ja-base language-pack-ja
+RUN locale-gen ja_JP.UTF-8
+
+# Set environment variables.
+ENV LANG ja_JP.UTF-8
 RUN fc-cache -fv
 
 RUN adduser chrome
